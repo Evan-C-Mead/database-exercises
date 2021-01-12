@@ -28,4 +28,4 @@ where hire_date like '199%'
 select  first_name, last_name
 from employees
 where last_name like '%q%'
-  and (employees.last_name not like '%qu%');
+  and (last_name not like '%qu%');
