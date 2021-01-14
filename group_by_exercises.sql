@@ -19,14 +19,14 @@ where last_name like '%q%'
   and last_name not like '%qu%'
 group by last_name;
 
-select last_name, count(last_name)
+select last_name, count(last_name) as '# of employees with last name'
 from employees
 where last_name like 'E%e'
   or last_name like '%q%'
   and last_name not like '%qu%'
 group by last_name;
 
-select count(gender), gender
+select gender, count(gender)
 from employees
 where first_name in ('Irena', 'Vidya', 'Maya')
 group by gender;
