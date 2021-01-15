@@ -12,4 +12,3 @@ VALUES('deadmau5', 'Random Album Title', 2008);
       ('deadmau5', '4x4=12', 2008);
       ('deadmau5', '> album title goes here <', 2008);
       ('deadmau5', 'W:/2016ALBUM/', 2008);
-
