@@ -45,5 +45,8 @@ from employees
 where emp_no in (
     select emp_no
     from salaries
-    where salary = '158220'
+    where salary like (
+        select max(salary)
+        from salaries
+        )
     );
