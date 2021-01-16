@@ -167,7 +167,7 @@ describe album;
 show index from album;
 
 alter table album
-add index album_name_key (artist);
+add unique (name, artist);
 
-alter table album
-drop index album_name_key;
+insert into album (artist, name, release_date, sales, genre)
+values ('test artist', 'test album', 2017, 12, 'test genre');
