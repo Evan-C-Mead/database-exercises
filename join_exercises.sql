@@ -40,3 +40,17 @@ join departments
 where dept_manager.to_date > now()
   and salaries.to_date > now()
 order by departments.dept_name;
+
+# BONUS
+select concat(employees.first_name, ' ', employees.last_name) as 'Employee', departments.dept_name as 'Department Name', concat(managers.first_name, ' ', managers.last_name) as 'Manager'
+from employees
+join dept_emp
+  on dept_emp.emp_no = employees.emp_no
+join departments
+  on departments.dept_no = dept_emp.dept_no
+join dept_manager
+  on dept_manager.dept_no = departments.dept_no
+join employees as managers
+  on dept_manager.emp_no = managers.emp_no
+where dept_emp.to_date > now()
+  and dept_manager.to_date > now();
